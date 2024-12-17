@@ -6,7 +6,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>
-
+# include <QPixmap>
 class FileDownloader : public QObject
 {
     Q_OBJECT
@@ -17,6 +17,8 @@ public:
     QNetworkAccessManager fNetworkManager;
     QByteArray fDownloadedData;
     Q_INVOKABLE QByteArray getData();
+    QPixmap DownloadedImage;
+
 signals:
     void _Downloaded();
 private slots:

@@ -1,5 +1,5 @@
 import QtQuick
-
+import QtQuick.Controls
 Item{
     id: _MainScreen
     Rectangle
@@ -8,6 +8,8 @@ Item{
         z: -1
         anchors.fill: parent
         //color: "transperent"
+
+
         Text {
             id: _Text
 
@@ -15,7 +17,7 @@ Item{
             anchors.top: parent.top
             anchors.topMargin: 50
             text: qsTr("FirstScreen")
-        }
+        }        
         Rectangle
         {
             id: _Button01
@@ -26,6 +28,10 @@ Item{
             width: 40
             height: 40
             radius: 60
+            Image {
+                id: _Image
+                source: "file"
+            }
         }
         Rectangle
         {
